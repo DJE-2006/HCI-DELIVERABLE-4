@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="status-bar">
+        <nav class="Tabs">
+            <img src="logo.png" alt="Logo" class="logo">
+            <a href="#home" class="tab active">Home</a>
+            <a href="#converter" class="tab">Converter</a>
+            <a href="#about" class="tab">About</a>
+            <a href="#contact" class="tab">Contact</a>
+        </nav>
+    </div>
+    </header>
+
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <h1>Currency Converter</h1>
+    <div>
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="fromCurrency">
+            <option value="USD">🇺🇸 United States Dollar (USD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+            <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="BRL">🇧🇷 Brazilian Real (BRL)</option>
+            <option value="ZAR">🇿🇦 South African Rand (ZAR)</option>
+            <option value="MXN">🇲🇽 Mexican Peso (MXN)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="SGD">🇸🇬 Singapore Dollar (SGD)</option>
+            <option value="HKD">🇭🇰 Hong Kong Dollar (HKD)</option>
+            <option value="KRW">🇰🇷 South Korean Won (KRW)</option>
+            <option value="SEK">🇸🇪 Swedish Krona (SEK)</option>
+            <option value="NOK">🇳🇴 Norwegian Krone (NOK)</option>
+            <option value="NZD">🇳🇿 New Zealand Dollar (NZD)</option>
+            <option value="TRY">🇹🇷 Turkish Lira (TRY)</option>
+            <option value="THB">🇹🇭 Thai Baht (THB)</option>
+            <option value="IDR">🇮🇩 Indonesian Rupiah (IDR)</option>
+            <option value="MYR">🇲🇾 Malaysian Ringgit (MYR)</option>
+            <option value="PHP">🇵🇭 Philippine Peso (PHP)</option>
+            <option value="PLN">🇵🇱 Polish Zloty (PLN)</option>
+            <option value="DKK">🇩🇰 Danish Krone (DKK)</option>
+            <option value="HUF">🇭🇺 Hungarian Forint (HUF)</option>
+            <option value="CZK">🇨🇿 Czech Koruna (CZK)</option>
+            <option value="ILS">🇮🇱 Israeli Shekel (ILS)</option>
+            <option value="SAR">🇸🇦 Saudi Riyal (SAR)</option>
+            <option value="AED">🇦🇪 United Arab Emirates Dirham (AED)</option>
+            <option value="EGP">🇪🇬 Egyptian Pound (EGP)</option>
+            <option value="NGN">🇳🇬 Nigerian Naira (NGN)</option>
+            <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+        </select>
+        <select id="toCurrency">
+            <option value="USD">🇺🇸 United States Dollar (USD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+            <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="BRL">🇧🇷 Brazilian Real (BRL)</option>
+            <option value="ZAR">🇿🇦 South African Rand (ZAR)</option>
+            <option value="MXN">🇲🇽 Mexican Peso (MXN)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="SGD">🇸🇬 Singapore Dollar (SGD)</option>
+            <option value="HKD">🇭🇰 Hong Kong Dollar (HKD)</option>
+            <option value="KRW">🇰🇷 South Korean Won (KRW)</option>
+            <option value="SEK">🇸🇪 Swedish Krona (SEK)</option>
+            <option value="NOK">🇳🇴 Norwegian Krone (NOK)</option>
+            <option value="NZD">🇳🇿 New Zealand Dollar (NZD)</option>
+            <option value="TRY">🇹🇷 Turkish Lira (TRY)</option>
+            <option value="THB">🇹🇭 Thai Baht (THB)</option>
+            <option value="IDR">🇮🇩 Indonesian Rupiah (IDR)</option>
+            <option value="MYR">🇲🇾 Malaysian Ringgit (MYR)</option>
+            <option value="PHP">🇵🇭 Philippine Peso (PHP)</option>
+            <option value="PLN">🇵🇱 Polish Zloty (PLN)</option>
+            <option value="DKK">🇩🇰 Danish Krone (DKK)</option>
+            <option value="HUF">🇭🇺 Hungarian Forint (HUF)</option>
+            <option value="CZK">🇨🇿 Czech Koruna (CZK)</option>
+            <option value="ILS">🇮🇱 Israeli Shekel (ILS)</option>
+            <option value="SAR">🇸🇦 Saudi Riyal (SAR)</option>
+            <option value="AED">🇦🇪 United Arab Emirates Dirham (AED)</option>
+            <option value="EGP">🇪🇬 Egyptian Pound (EGP)</option>
+            <option value="NGN">🇳🇬 Nigerian Naira (NGN)</option>
+            <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+        </select>
+        <button onclick="convertCurrency()">Convert</button>
+    </div>
+    <h2 id="result"></h2>
+
+    <script src="javascript.js"></script>
+    <script>
+        async function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+
+            if (isNaN(amount)) {
+                document.getElementById('result').innerText = "Please enter a valid amount.";
+                return;
+            }
+            // Display a loading message while fetching data
+            document.getElementById('result').innerText = "Fetching conversion rates...";
+            try {
+                const apiKey = '6664dc7cf26da11de3b59c1c'; // API key
+                const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`);
+                const data = await response.json();
+
+                if (data.result === "success") {
+                    const rate = data.conversion_rates[toCurrency];
+                    const convertedAmount = (amount * rate).toFixed(2);
+                    document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+                } else {
+                    document.getElementById('result').innerText = "Error fetching conversion rates.";
+                }
+            } catch (error) {
+                document.getElementById('result').innerText = "An error occurred. Please try again.";
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
